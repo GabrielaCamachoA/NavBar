@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: gray;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* height: 100vh; */
+}
+.img{
+margin-left: 70px;
+}
+
+.header{
+    display: flex;
+    justify-content: start;
+    background-color: rgb(48, 48, 48);
+    padding: 15px;
+    gap: 130px;
+}
+input{
+    border-radius: 50px;
+    background-color: rgb(86, 85, 85);
+    border: none;
+    /* margin-left: 10px; */
+    padding-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    width: 300px;
+    outline: none;
+}
+input {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+p{
+    /* background-color: color; */
+    color: yellow;
+    display: flex;
+    align-items: center;
+
+}
+p:hover{
+     text-shadow: 0px 0px 8px white;
+}
+.items{
+    background-color: black;
+    display: flex;
+    color: white;
+    height: 42px;
+    padding-bottom: 2px;
+    padding-top: 10px;
+    justify-content: center;
+    /* justify-content: center; */
+    text-align: center;
+    /* align-items: center; */
+    /* color: white; */
+}
+ul{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    text-decoration: none;
+    /* padding-inline: ; */
+    /* padding: 10px; */
+    /* gap: 60px; */
+    width: 80%;
+    height: 100%;
+    list-style: none;
+    font-size: 22px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* border-bottom: 2px solid red; */
+
+}
+li{
+
+    width: 100%;
+    /* height: 100%; */
+
+    /* width: 120px;
+    height: 100%; */
+ transition: 300ms;
+}
+ /* .items #A{
+    border-bottom: 5px solid red;
+}
+.items #B{
+    border-bottom: 4px solid blue;
+}
+.items #C{
+    border-bottom: 4px solid green;
+}
+.items #D{
+    border-bottom: 4px solid orange;
+}
+.items #E{
+    border-bottom: 4px solid purple ;
+}
+.items #F{
+    border-bottom: 4px solid yellow;
+}
+.items #G{
+    border-bottom: 4px solid rgb(19, 158, 130);
+} */
+li:hover{
+    text-shadow: 0px 0px 8px white;
+    font-size: xx-large;
+    transition: 300ms;
+    width: 100%;
+}
+/* el nav cae desde arriba */
+.items {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*el fondo del body cambie */
+body {
+    background: linear-gradient(90deg, gray, rgb(249, 14, 14));
+    animation: backgroundShift 5s ease-in-out infinite;
+}
+
+/* @keyframes backgroundShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+} */
+.items li {
+    position: relative;
+}
+
+.items li:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: currentColor;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-out;
+}
+
+li:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+li:hover {
+    animation: swing 0.5s ease-in-out forwards;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+li:hover {
+    animation: glow 1s ease-in-out infinite alternate;
+}
+/* resplandor animado alrededor de los elementos */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px white, 0 0 20px yellow, 0 0 30px orange;
+    }
+    100% {
+        text-shadow: 0 0 20px white, 0 0 40px yellow, 0 0 50px orange;
+    }
+}
+/* li:hover {
+    animation: bounce 0.5s ease-in-out forwards;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+} */
+
+p {
+    animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+input:hover {
+    border: 2px solid white;
+    animation: expandBorder 0.4s ease forwards;
+}
+
+@keyframes expandBorder {
+    0% {
+        box-shadow: 0 0 0 0 white;
+    }
+    100% {
+        box-shadow: 0 0 10px 2px white;
+    }
+}
+.items #A, .items #B, .items #C, .items #D, .items #E, .items #F, .items #G {
+    animation: borderFlash 2s linear infinite alternate;
+}
+/* hace que los bordes de los elementos seleccionados parpadeen de forma sutil. */
+@keyframes borderFlash {
+    0% {
+        border-bottom-color: rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        border-bottom-color: rgba(255, 255, 255, 1);
+    }
+}
+body {
+    background: linear-gradient(90deg, rgb(2, 2, 2), rgb(109, 18, 18));
+    background-size: 200% 200%;
+    animation: moveBackground 10s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+/* 
+increaseSize: Aumenta el tamaño de un elemento.
+pulseShadow: Crea un efecto de pulsación en la sombra de texto.
+fadeIn: Hace que un elemento aparezca desde arriba con desvanecimiento.
+backgroundShift: Mueve el fondo en un bucle continuo.
+expandBorder: Expande el borde de un elemento al hacer hover.
+glow: Añade un resplandor que crece sobre los elementos.
+bounce: Añade un pequeño rebote cuando se pasa el cursor.
+borderFlash: Hace parpadear el borde de los elementos seleccionados.
+moveBackground: Desplaza el fondo de manera continua.
+spin: Hace girar un loader o spinner. */
