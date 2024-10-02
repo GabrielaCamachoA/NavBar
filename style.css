@@ -9,9 +9,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #000;
 }
 header{
     width:100%;
+    background-color: #000;
 }
 input::placeholder{
     color: #000;
@@ -59,35 +61,16 @@ p{
 p:hover{
     color:#fff;
 }
-.items{
-    display: flex;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    box-shadow:  0 36px black inset, 
-                130px 0 black inset, 286px 0 red inset, 
-                444px 0 blue inset, 599px 0 green inset, 
-                734px 0 orange inset, 880px 0 fuchsia inset, 
-                1079px 0 red inset, 1240px 0 yellow inset;
-    transition: .4s;
-}
-.items:hover{
-    box-shadow:  0 32px black inset, 
-    130px 0 black inset, 286px 0 red inset, 
-    444px 0 blue inset, 599px 0 green inset, 
-    734px 0 orange inset, 880px 0 fuchsia inset, 
-    1079px 0 red inset, 1240px 0 yellow inset;
-}
 ul{
     display: flex;
-    gap: 110px;
     align-items: center;
+    justify-content: center;
 }
 li{
     cursor: pointer;
+    padding: 12px 50px 10px 52px;
+    transition: 0.4s;
+    color: #fff;
 }
 input:focus{
     outline: none;
@@ -95,4 +78,80 @@ input:focus{
 }
 input:hover{
     background-size: 36px;
+}
+li:nth-child(1):hover{
+    text-shadow: 0px 0px 5px #fff;
+    border-bottom: 1px solid #f4cd57;
+}
+li:nth-child(2):hover{
+    border-bottom: 1px solid blue;
+}
+li:nth-child(3):hover{
+    border-bottom: 1px solid green;
+}
+li:nth-child(4):hover{
+    border-bottom: 1px solid orange;
+}
+li:nth-child(5):hover{
+    border-bottom: 1px solid fuchsia;
+}
+li:nth-child(6):hover{
+    border-bottom: 1px solid red;
+}
+li:nth-child(7):hover{
+    border-bottom: 1px solid yellow;
+}
+
+@media (max-width: 1200px) {
+    header{
+        width: 100%;
+    }
+    .header{
+        display: flex;
+        gap: 4pc;
+    }
+}
+@media (min-width: 1037px) {
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    li{
+        padding: 12px 45px 12px 40px; ;
+    }
+}
+@media (max-width: 957px) {
+    header{
+        width: 100%;
+    }
+    .header{
+        display: flex;
+        gap: 34px;
+    }
+    input {
+        background-image: url('img/lupa.png');
+        background-position: right 10px center; 
+        background-repeat: no-repeat;
+        background-size: 28px;
+        padding-left: 20px; 
+        height: 45px;
+        width: 280px;
+        font-size: 16px;
+        border-radius: 50px;
+        border: none;
+        background-color: #808081;
+        transition: 0.2s;
+        cursor: default;
+    }
+}
+@media (max-width: 890px) {
+    .header{
+        display: flex;
+        gap: 2pc;
+        width: 101%;
+    }
+    header{
+        width: 101%;
+    }
 }
