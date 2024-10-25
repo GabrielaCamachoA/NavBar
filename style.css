@@ -12,7 +12,7 @@ body{
     background-color: #000;
 }
 header{
-    width:100%;
+    width: 100%;
     background-color: #000;
 }
 input::placeholder{
@@ -35,7 +35,7 @@ input::placeholder{
     color: #fff;
 }
 .img{
-    width: 340px;
+    width: 28%;
 }
 input {
     background-image: url('img/lupa.png');
@@ -102,56 +102,64 @@ li:nth-child(7):hover{
     border-bottom: 1px solid yellow;
 }
 
-@media (max-width: 1200px) {
-    header{
-        width: 100%;
-    }
+@media (max-width: 1000px) {
     .header{
-        display: flex;
-        gap: 4pc;
+        width: 100%;
+        justify-content: space-between;
     }
 }
-@media (min-width: 1037px) {
+@media (max-width: 999px) {
+    body{
+        background-color: #fff;
+    }
+    .header{
+        width: 100%;
+    }
+    input{
+        width: 200px;
+    }
+    .cuenta{
+        display: none;
+    }
     ul{
+        flex-direction: column;
+    }
+    li{
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    li{
-        padding: 12px 45px 12px 40px; ;
+    li:nth-child(1){
+        text-shadow: 0px 0px 5px #fff;
+        border-bottom: 1px solid #f4cd57;
     }
+    li:nth-child(2){
+        border-bottom: 1px solid blue;
+    }
+    li:nth-child(3){
+        border-bottom: 1px solid green;
+    }
+    li:nth-child(4){
+        border-bottom: 1px solid orange;
+    }
+    li:nth-child(5){
+        border-bottom: 1px solid fuchsia;
+    }
+    li:nth-child(6){
+        border-bottom: 1px solid red;
+    }
+    li:nth-child(7){
+        border-bottom: 1px solid blue;
+    }   
 }
-@media (max-width: 957px) {
-    header{
-        width: 100%;
+@media (max-width: 695px) {
+    input{
+        width: 100px;
+        background-color: rgba(0, 0, 0, 0);
     }
-    .header{
-        display: flex;
-        gap: 34px;
+    input::placeholder{
+        font-size: 0;
     }
-    input {
-        background-image: url('img/lupa.png');
-        background-position: right 10px center; 
-        background-repeat: no-repeat;
-        background-size: 28px;
-        padding-left: 20px; 
-        height: 45px;
-        width: 280px;
-        font-size: 16px;
-        border-radius: 50px;
-        border: none;
-        background-color: #808081;
-        transition: 0.2s;
-        cursor: default;
-    }
-}
-@media (max-width: 890px) {
-    .header{
-        display: flex;
-        gap: 2pc;
-        width: 101%;
-    }
-    header{
-        width: 101%;
-    }
+   
 }
